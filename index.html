@@ -970,22 +970,24 @@
           <h3 class="text-warning">Explore Whats Streaming</h3>
           <!-- nav -->
           <div class="col-sm-12 col-md-12 mt-2">
-            <ul class="nav nav-underline" >
-              <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="#prime_section">Amazon Prime</a>
+            <ul class="nav nav-underline" id="streamingTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="prime-tab" data-bs-toggle="tab" data-bs-target="#prime_section" type="button" role="tab" aria-controls="prime_section" aria-selected="true">Amazon Prime</button>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#hbo_section">HBO</a>
+              <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="hbo-tab" data-bs-toggle="tab" data-bs-target="#hbo_section" type="button" role="tab" aria-controls="hbo_section" aria-selected="false">HBO</button>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#netflix_section">Netflix</a>
+              <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="netflix-tab" data-bs-toggle="tab" data-bs-target="#netflix_section" type="button" role="tab" aria-controls="netflix_section" aria-selected="false">Netflix</button>
               </li>
-            </ul>
+          </ul>
           </div>
           <!-- nav -->
 
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="prime_section" role="tabpanel" aria-labelledby="prime-tab" tabindex="0">
           <!-- Prime Section -->
-          <div class="col-sm-12 col-md-12 mt-2" id="prime_section">
+          <div class="col-sm-12 col-md-12 mt-2">
             <div>
               <h3 class="text-warning">Amazon Prime</h3> 
             </div>
@@ -1323,9 +1325,11 @@
             <!-- AM Corousel -->
           </div>
           <!-- Prime Section -->
+          </div>
 
+          <div class="tab-pane fade" id="hbo_section" role="tabpanel" aria-labelledby="hbo-tab" tabindex="0">
           <!-- HBO -->
-          <div class="col-sm-12 col-md-12" id="hbo_section" style="display: none;">
+          <div class="col-sm-12 col-md-12">
             <div>
               <h3 class="text-warning">HBO</h3> 
             </div>
@@ -1662,10 +1666,13 @@
             </div>
             <!-- HBO Corousel -->
           </div>
+          </div>
           <!-- HBO -->
 
+
           <!-- NETFLIX -->
-          <div class="col-sm-12 col-md-12" id="netflix_section" style="display: none;">
+          <div class="tab-pane fade" id="netflix_section" role="tabpanel" aria-labelledby="netflix-tab" tabindex="0">
+          <div class="col-sm-12 col-md-12">
             <div>
               <h3 class="text-warning">NETFLIX</h3> 
             </div>
@@ -2002,7 +2009,9 @@
             </div>
             <!-- Net Corousel -->
           </div>
+          </div>
           <!-- Netflix -->
+        </div>
         </div>
       </div>
       <!-- Explore Whats Streaming -->
