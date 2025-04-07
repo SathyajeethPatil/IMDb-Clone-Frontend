@@ -4,4 +4,22 @@ nav{
 nav .nav-item .nav-link{
     color: #fff;
 }
-nav 
+.transparent-bg {
+    background-color: #121212;
+  }
+
+.transparent-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://resizing.flixster.com/8N9E4S36RDMwtsKk79Cyd-fO7Bk=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p13003177_k_v10_aa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(9px);
+    opacity: 0.1; /* Makes only the background transparent */
+    z-index: 0;
+  }
